@@ -1,0 +1,81 @@
+[
+  {
+    "slug": "rebirth-performance",
+    "title_en": "Rebirth — Performance Art",
+    "title_fa": "تولد دوباره — پرفورمنس آرت",
+    "role_en": "Performance Artist",
+    "role_fa": "پرفورمنس آرتیست",
+    "year": "2016",
+    "thumb": "/images/the-rebirth-thumb.jpg",
+    "description_en": "Performed at the 5th annual Festival of 30 Performances, 30 Artists, 30 Days. An exploration of transformation and renewal through embodied practice.",
+    "description_fa": "اجرا شده در پنجمین جشنواره سالانه ۳۰ پرفورمنس، ۳۰ هنرمند، ۳۰ روز. کاوشی در دگرگونی و تجدید از طریق تمرین تجسم یافته.",
+    "location": "Tehran, Iran",
+    "images": [
+      "/images/the-rebirth/photo_1_2025-08-01_01-22-18.jpg",
+      "/images/the-rebirth/photo_2_2025-08-01_01-22-18.jpg",
+      "/images/the-rebirth/photo_3_2025-08-01_01-22-18.jpg",
+      "/images/the-rebirth/photo_4_2025-08-01_01-22-18.jpg",
+      "/images/the-rebirth/photo_5_2025-08-01_01-22-18.jpg",
+      "/images/the-rebirth/photo_6_2025-08-01_01-22-18.jpg"
+    ]
+  },
+  {
+    "slug": "trajectory-performance",
+    "title_en": "Trajectory — Performance Art",
+    "title_fa": "مسیر — پرفورمنس آرت",
+    "role_en": "Performance Artist",
+    "role_fa": "پرفورمنس آرتیست",
+    "year": "2017",
+    "thumb": "/images/trajectory-thumb.jpg",
+    "description_en": "Performed at the 6th annual Festival of 30 Performances, 30 Artists, 30 Days. A meditation on movement, direction, and the paths we choose.",
+    "description_fa": "اجرا شده در ششمین جشنواره سالانه ۳۰ پرفورمنس، ۳۰ هنرمند، ۳۰ روز. تاملی در حرکت، جهت و مسیرهایی که انتخاب می کنیم.",
+    "location": "Tehran, Iran",
+    "images": [
+      "/images/trajectory/photo_1_2025-08-01_01-20-13.jpg",
+      "/images/trajectory/photo_2_2025-08-01_01-20-13.jpg",
+      "/images/trajectory/photo_3_2025-08-01_01-20-13.jpg",
+      "/images/trajectory/photo_4_2025-08-01_01-20-13.jpg",
+      "/images/trajectory/photo_5_2025-08-01_01-20-13.jpg"
+    ]
+  },
+  {
+    "slug": "gheyn-jack-jimmy-david-performance",
+    "title_en": "Gheyn, Jack, Jimmy and David — Performance Art",
+    "title_fa": "قین، جک، جیمی و دیوید — پرفورمنس آرت",
+    "role_en": "Performance Artist",
+    "role_fa": "پرفورمنس آرتیست",
+    "year": "2018",
+    "thumb": "/images/gheyn-thumb.jpg",
+    "description_en": "Performed at the 7th annual Festival of 30 Performances, 30 Artists, 30 Days. A collaborative exploration of identity and character through performance.",
+    "description_fa": "اجرا شده در هفتمین جشنواره سالانه ۳۰ پرفورمنس، ۳۰ هنرمند، ۳۰ روز. کاوشی مشترک در هویت و شخصیت از طریق پرفورمنس.",
+    "location": "Tehran, Iran",
+    "images": [
+      "/images/gheyn/photo_1_2025-08-01_01-14-48.jpg",
+      "/images/gheyn/photo_2_2025-08-01_01-14-48.jpg",
+      "/images/gheyn/photo_3_2025-08-01_01-14-48.jpg",
+      "/images/gheyn/photo_4_2025-08-01_01-14-48.jpg",
+      "/images/gheyn/photo_5_2025-08-01_01-14-48.jpg"
+    ]
+  },
+  {
+    "slug": "touchpad-performance",
+    "title_en": "Touchpad or whatever that's an obstacle or not — Performance Art",
+    "title_fa": "تاچ پد یا هر چیزی که مانع است یا نه — پرفورمنس آرت",
+    "role_en": "Performance Artist",
+    "role_fa": "پرفورمنس آرتیست",
+    "year": "2018",
+    "thumb": "/images/touchpad-thumb.jpg",
+    "description_en": "Performed at the 7th annual Festival of 30 Performances, 30 Artists, 30 Days. An investigation of technology, interaction, and the barriers we create and overcome.",
+    "description_fa": "اجرا شده در هفتمین جشنواره سالانه ۳۰ پرفورمنس، ۳۰ هنرمند، ۳۰ روز. تحقیقی در مورد فناوری، تعامل و موانعی که ایجاد می کنیم و بر آنها غلبه می کنیم.",
+    "location": "Tehran, Iran",
+    "images": [
+      "/images/touchpad/photo_3_2025-08-01_01-27-58.jpg",
+      "/images/touchpad/photo_5_2025-08-01_01-27-58.jpg",
+      "/images/touchpad/photo_6_2025-08-01_01-27-58.jpg",
+      "/images/touchpad/photo_7_2025-08-01_01-27-58.jpg",
+      "/images/touchpad/photo_8_2025-08-01_01-27-58.jpg",
+      "/images/touchpad/photo_9_2025-08-01_01-27-58.jpg",
+      "/images/touchpad/photo_10_2025-08-01_01-27-58.jpg"
+    ]
+  }
+]

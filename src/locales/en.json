@@ -1,0 +1,105 @@
+{
+  "about": "About",
+  "work": "Work",
+  "contact": "Contact",
+  "mehdiAsadi": "Mehdi Asadi",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "sendMessage": "Send Message",
+  "messageSent": "Message sent. Thank you!",
+  "back": "Back",
+  "designerLine": "Designer & Performance Artist — Tehran, Iran",
+  "cv": {
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "degree": "Master of Fine Arts",
+          "field": "Visual Communication",
+          "institution": "University of Tehran",
+          "year": "2021-2024",
+          "location": "Tehran, Iran"
+        },
+        {
+          "degree": "Bachelor of Arts",
+          "field": "Visual Communication",
+          "institution": "University of Tehran",
+          "year": "2015-2019",
+          "location": "Tehran, Iran"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "items": [
+        {
+          "role": "Visual Researcher",
+          "organization": "Herfeh:Honarmand Cultural Institute",
+          "year": "2024-Present",
+          "location": "Tehran, Iran",
+          "description": "Contemporary Persian visual language research and editorial design"
+        },
+        {
+          "role": "Type Designer",
+          "organization": "Independent Practice",
+          "year": "2023-Present",
+          "location": "Tehran, Iran",
+          "description": "Experimental typography for contemporary Persian poetry collections"
+        },
+        {
+          "role": "Multimedia Artist",
+          "organization": "Ettefagh Collective",
+          "year": "2022-2023",
+          "location": "Tehran, Iran",
+          "description": "Cross-disciplinary sound and vision projects"
+        },
+        {
+          "role": "Visual Anthropologist",
+          "organization": "Tehran Urban Studies",
+          "year": "2023",
+          "location": "Tehran, Iran",
+          "description": "Urban archaeology through visual documentation and analysis"
+        }
+      ]
+    },
+    "exhibitions": {
+      "title": "Exhibitions",
+      "items": [
+        {
+          "title": "Digital Calligraphy: Code as Script",
+          "venue": "Tehran Contemporary Art Gallery",
+          "year": "2024",
+          "type": "Solo Exhibition"
+        },
+        {
+          "title": "Persian Typography Today",
+          "venue": "Cultural Center of Iran",
+          "year": "2023",
+          "type": "Group Exhibition"
+        },
+        {
+          "title": "Urban Fragments",
+          "venue": "Azad Art Gallery",
+          "year": "2023",
+          "type": "Solo Exhibition"
+        }
+      ]
+    },
+    "awards": {
+      "title": "Recognition",
+      "items": [
+        {
+          "title": "Excellence in Visual Research",
+          "organization": "Iranian Graphic Design Association",
+          "year": "2024"
+        },
+        {
+          "title": "Best Typography Project",
+          "organization": "Tehran Design Week",
+          "year": "2023"
+        }
+      ]
+    }
+  }
+}

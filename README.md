@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mehdi Asadi — Visual Artist Portfolio
+
+An experimental, spatial portfolio website for Tehran-based visual artist and researcher Mehdi Asadi. Inspired by Cargo sites and Tim Rodenbroeker's aesthetic approach, this site breaks away from traditional hierarchical layouts in favor of a more artistic, non-linear presentation.
+
+## Design Philosophy
+
+- **Spatial Layout**: Elements are positioned independently across the viewport rather than stacked vertically
+- **Minimal Interaction**: Focus on essential content with plenty of white space
+- **Experimental Navigation**: Space bar reveals navigation overlay; click elements to explore
+- **Artistic Typography**: Using Inter as a Moderat alternative with custom artistic styling
+- **Cultural Context**: Reflects contemporary Persian visual culture and experimental design research
+
+## Features
+
+- Custom cursor with mix-blend-mode effects
+- Spatial element positioning inspired by experimental design
+- Interactive work previews with detail overlays
+- Experimental navigation system (press Space)
+- Responsive design that maintains artistic integrity
+- Framer Motion animations for smooth interactions
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the spatial canvas.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Navigation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Mouse**: Hover over elements to see interactions
+- **Space Bar**: Open/close navigation overlay
+- **Click**: Interact with work samples and elements
+- **ESC**: Close overlays and return to main canvas
 
-## Learn More
+## Typography
 
-To learn more about Next.js, take a look at the following resources:
+Currently using Inter as a fallback for Moderat. To use the actual Moderat font:
+1. Add Moderat font files to `src/fonts/`
+2. Update the font configuration in `src/app/layout.tsx`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Color Palette
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Background**: Warm off-white (#faf9f7) / Deep black (#0f0f0f)
+- **Artistic Red**: #c44536 (primary accent)
+- **Artistic Blue**: #4a6fa5 (secondary accent)
+- **Artistic Yellow**: #d4af37 (tertiary accent)
+- **Muted**: #6b6b6b (text secondary)
 
-## Deploy on Vercel
+## Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/components/SpatialCanvas.tsx` - Main spatial layout component
+- `src/data/artistic-works.json` - Work data with artistic descriptions
+- `src/app/globals.css` - Custom artistic styling and utilities

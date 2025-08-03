@@ -1,26 +1,536 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Moderat fonts */
+@font-face {
+  font-family: 'Moderat';
+  src: url('/fonts/Moderat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat';
+  src: url('/fonts/Moderat-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat';
+  src: url('/fonts/Moderat-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat';
+  src: url('/fonts/Moderat-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Base styles */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light theme with warm, gallery-like feel */
+  --background: #fefefe;
+  --foreground: #0a0a0a;
+  --muted: #6b7280;
+  --muted-light: #9ca3af;
+  --accent: #000000;
+  --accent-light: #f5f5f5;
+  --border: #e5e7eb;
+  --border-light: #d1d5db;
+  --surface: #f9fafb;
+  --surface-elevated: #ffffff;
+  --surface-overlay: #f3f4f6;
+
+  /* Adjusted artistic palette for light mode */
+  --artistic-red: #b91c1c;
+  --artistic-blue: #1d4ed8;
+  --artistic-yellow: #ca8a04;
+  --artistic-green: #15803d;
+
+  /* Semantic colors for light mode */
+  --success: #16a34a;
+  --warning: #d97706;
+  --error: #dc2626;
+  --info: #2563eb;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+.dark {
+  /* Dark theme - primary artistic palette */
+  --background: #0f0f0f;
+  --foreground: #fafafa;
+  --muted: #a1a1a1;
+  --muted-light: #d4d4d4;
+  --accent: #ffffff;
+  --accent-light: #1a1a1a;
+  --border: #2a2a2a;
+  --border-light: #404040;
+  --surface: #171717;
+  --surface-elevated: #262626;
+  --surface-overlay: #404040;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Artistic accents */
+  --artistic-red: #dc2626;
+  --artistic-blue: #2563eb;
+  --artistic-yellow: #eab308;
+  --artistic-green: #16a34a;
+
+  /* Semantic colors */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Moderat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.618; /* Golden ratio for optimal readability */
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Sophisticated Typography System based on modular scale */
+.type-display {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "ss01" 1;
+}
+
+.type-heading-xl {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.type-heading-lg {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.type-heading-md {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.type-heading-sm {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+.type-body-lg {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+}
+
+.type-body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.618;
+  letter-spacing: -0.005em;
+}
+
+.type-body-sm {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+.type-caption {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+/* Persian-inspired typography enhancements */
+@layer typography {
+  .persian-display {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 500;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "ss01" 1;
+    /* Persian calligraphy-inspired spacing */
+    word-spacing: 0.1em;
+  }
+
+  .persian-heading {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    /* Cultural spacing for Persian text rhythm */
+    word-spacing: 0.05em;
+  }
+
+  .cultural-accent {
+    position: relative;
+    color: var(--artistic-red);
+    transition: all 0.3s ease;
+  }
+
+  .cultural-accent::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--artistic-red);
+    transition: width 0.3s ease;
+  }
+
+  .cultural-accent:hover::after {
+    width: 100%;
+  }
+
+  /* Experimental typography for cultural research context */
+  .research-text {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    /* Subtle Persian text rhythm */
+    word-spacing: 0.03em;
+  }
+}
+
+/* Legacy classes for backward compatibility */
+.artistic-heading {
+  @apply type-heading-md;
+}
+
+.artistic-body {
+  @apply type-body;
+}
+
+.artistic-accent {
+  color: var(--artistic-red);
+  transition: color 0.2s ease;
+}
+
+/* Sophisticated responsive layout utilities */
+.asymmetric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(1rem, 4vw, 2rem);
+  align-items: start;
+}
+
+.responsive-spatial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: clamp(0.5rem, 2vw, 1rem);
+  height: 100vh;
+  width: 100vw;
+}
+
+.artistic-border {
+  border: 1px solid var(--border);
+}
+
+/* Responsive typography scaling */
+@media (max-width: 768px) {
+  .type-display {
+    font-size: clamp(2rem, 12vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .type-heading-xl {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+  }
+
+  .type-heading-lg {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .type-display {
+    font-size: clamp(1.75rem, 15vw, 3rem);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Smooth transitions for artistic interactions */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Custom cursor only when spatial canvas is active */
+.spatial-canvas {
+  cursor: none;
+}
+
+/* Spatial layout utilities */
+.spatial-element {
+  position: absolute;
+  transform-origin: center;
+}
+
+.spatial-element:hover {
+  z-index: 10;
+}
+
+/* Minimal scrollbar for overlays */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 1px solid var(--artistic-red);
+  outline-offset: 2px;
+}
+
+/* Persian cultural design elements */
+@layer cultural {
+  .persian-geometric {
+    position: relative;
+  }
+
+  .persian-geometric::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      linear-gradient(45deg, transparent 40%, var(--artistic-red) 40%, var(--artistic-red) 60%, transparent 60%),
+      linear-gradient(-45deg, transparent 40%, var(--artistic-blue) 40%, var(--artistic-blue) 60%, transparent 60%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.02;
+    pointer-events: none;
+  }
+
+  .cultural-grid {
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: -1px -1px;
+  }
+
+  /* Tehran-inspired urban texture */
+  .urban-texture {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .urban-texture::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 25% 25%, var(--artistic-red) 1px, transparent 1px),
+      radial-gradient(circle at 75% 75%, var(--artistic-blue) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.03;
+    pointer-events: none;
+  }
+}
+
+/* Artistic hover states */
+.artistic-hover:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* Enhanced experimental interactions */
+@layer interactions {
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+  }
+
+  .glitch-text:hover {
+    animation: glitch-text 0.3s ease-in-out;
+  }
+
+  @keyframes glitch-text {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-1px, 1px); }
+    40% { transform: translate(1px, -1px); }
+    60% { transform: translate(-1px, -1px); }
+    80% { transform: translate(1px, 1px); }
+  }
+
+  /* Persian calligraphy-inspired hover effect */
+  .calligraphy-hover {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .calligraphy-hover:hover {
+    letter-spacing: 0.05em;
+    transform: translateY(-1px);
+  }
+
+  .calligraphy-hover::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--artistic-red), var(--artistic-blue));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .calligraphy-hover:hover::before {
+    width: 100%;
+  }
+}
+
+/* Text selection styling */
+::selection {
+  background: var(--artistic-red);
+  color: var(--background);
+}
+
+.hero-background {
+  background-image: url('/images/tehran-thumb.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Performance and Accessibility Optimizations */
+@layer performance {
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+
+    /* Disable glitch effects for reduced motion */
+    .glitch-text:hover {
+      animation: none;
+    }
+
+    /* Simplify hover effects */
+    .artistic-hover:hover,
+    .calligraphy-hover:hover {
+      transform: none;
+    }
+  }
+
+  /* Optimize for LCP - Critical rendering path */
+  .hero-background {
+    contain: layout style paint;
+    will-change: auto;
+  }
+
+  /* GPU acceleration for smooth animations */
+  .spatial-element,
+  .artistic-hover,
+  .calligraphy-hover {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* Optimize image loading */
+  img {
+    content-visibility: auto;
+    contain-intrinsic-size: 300px 200px;
+  }
+}
+
+/* Enhanced accessibility */
+@layer accessibility {
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    :root {
+      --artistic-red: #ff0000;
+      --artistic-blue: #0000ff;
+      --artistic-yellow: #ffff00;
+      --border: #000000;
+      --muted: #666666;
+    }
+  }
+
+  /* Focus management for keyboard navigation */
+  .focus-trap {
+    outline: 2px solid var(--artistic-red);
+    outline-offset: 2px;
+  }
+
+  /* Screen reader optimizations */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 }
