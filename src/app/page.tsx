@@ -2,8 +2,6 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import SpatialCanvas from "@/components/SpatialCanvasNew";
-import WorkGrid from "@/components/WorkGrid";
-import Contact from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
